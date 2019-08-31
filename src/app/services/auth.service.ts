@@ -21,14 +21,14 @@ export class AuthService {
   // Login
   // https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
 
-  constructor( private http: HttpClient ) {
+  constructor( private http: HttpClient) {
 
     this.leerToken();
 
-   }
+  }
 
-   logout() {
-
+  logout() {
+    localStorage.removeItem('token');
   }
 
   login( usuario: UsuarioModel ) {
